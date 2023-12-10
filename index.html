@@ -4,38 +4,49 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Currency Converter</title>
+        <title>wdd330 Project: Currency Converter</title>
 
         <!-- STYLE SHEETS -->
         <!-- normalize -->
         <link href="styles/normalize.css" rel="stylesheet">
-        <link rel="stylesheet" href="styles/main.css">
+        <!-- FontAweome CDN Link for Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+        <!-- default -->
+        <link href="styles/main.css" rel="stylesheet">
+
     </head>
 
     <body>
-        <div class="converter-container">
-            <h1 class="heading">Victor's Currency Converter</h1>
-            <div class="rates">
-                <div class="rate1">
-                    <h3>FROM</h3>
+        <div class="wrapper">
+            <header>VN Global Currency Converter</header>
+            <form action="#">
+                <div class="amount">
+                    <p>Enter Amount</p>
+                    <input type="text" value="1">
                 </div>
-                <div class="rate2">
+                <div class="drop-list">
+                    <div class="from">
+                        <p>From</p>
+                        <div class="select-box">
+                            <img src="https://flagcdn.com/48x36/us.png" alt="flag">
+                            <select> <!-- Options tag are inserted from JavaScript --> </select>
+                        </div>
+                    </div>
+                    <div class="icon"><i class="fas fa-exchange-alt"></i></div>
+                    <div class="to">
+                        <p>To</p>
+                        <div class="select-box">
+                            <img src="https://flagcdn.com/48x36/ng.png" alt="flag">
+                            <select> <!-- Options tag are inserted from JavaScript --> </select>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="main">
-                <div class="initial">
-                    <div class="options"><select></select></div>
-                    <div class="input"><input type="number"></div>
-                </div>
-                <div class="target">
-                    <h3>TO</h3>
-
-                    <div class="options"><select></select></div>
-                    <div class="input"><input disabled type="number"></div>
-                </div>
-            </div>
-            <button class="result">Result</button>
+                <div class="exchange-rate">Getting exchange rate...</div>
+                <button>Get Exchange Rate</button>
+            </form>
         </div>
+
+        <script src="scripts/currency-codes.js"></script>
         <script src="scripts/scripts.js"></script>
     </body>
 
